@@ -39,7 +39,8 @@ You use git clone to be able to download the documents at GitHub
 Git
 
 ### Installation instruction
-
+fork this repo: https://github.com/M-st3lla/python-p3-v2-final-project-template.git
+git clone https://github.com/M-st3lla/python-p3-v2-final-project-template.git
 
 ## TECHNOLOGIES USED.
 
