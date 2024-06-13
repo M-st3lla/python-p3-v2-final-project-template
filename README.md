@@ -41,10 +41,6 @@ Git
 ### Installation instruction
 
 
-
-### LIVE LINK
-[Git](gh-pages link)
-
 ## TECHNOLOGIES USED.
 
 PYTHON,
