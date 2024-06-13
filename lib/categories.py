@@ -63,7 +63,6 @@ class CategoryManager:
         category_name = input("Enter category name: ")
         description = input("Enter category description: ")
 
-        # Get tags for this category
         tags = input("Enter tags for this category")
         tag_ids = []
         for tag in tags:
@@ -78,13 +77,11 @@ class CategoryManager:
                     CONN.commit()
                     tag_ids.append(CURSOR.lastrowid)
 
-        # Insert category into category_table
         CURSOR.execute("INSERT INTO category_table (category_name, description, created_by, date_created, date_modified) VALUES (?, ?, ?, ?, ?)", 
                        (category_name, description, self.user_id, datetime.now().strftime("%Y-%m-%d %H:%M:%S"), datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
         CONN.commit()
         category_id = CURSOR.lastrowid
 
-        # Insert category-tag associations into category_tag table
         for tag_id in tag_ids:
             CURSOR.execute("INSERT INTO category_tag (category_id, tag_id) VALUES (?, ?)", (category_id, tag_id))
         CONN.commit()
